@@ -3,7 +3,12 @@ pipeline {
     stages{
         stage('Podman Build'){
             steps{
-                sh "Podman build -t Dockerfile"
+                sh """
+                #!/bin/sh -x
+                podman machine init
+                podman machine start
+                Podman build -t Dockerfile
+                """
             }
         }
     }
