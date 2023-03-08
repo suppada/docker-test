@@ -6,7 +6,7 @@ pipeline {
                 sh """
                 #!/bin/sh -x
                 ls -al
-                Podman build -t Dockerfile
+                Podman build .
                 """
             }
         }
