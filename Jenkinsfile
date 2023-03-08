@@ -5,6 +5,7 @@ pipeline {
             steps{
                 sh """
                 #!/bin/sh -x
+                ls -al
                 Podman build -t Dockerfile
                 """
             }
