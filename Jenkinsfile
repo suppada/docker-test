@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('Podman Build'){
             steps{
-                sh "Podman build"
+                sh "Podman build -t Dockerfile"
             }
         }
     }
