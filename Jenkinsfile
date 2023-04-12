@@ -27,7 +27,7 @@ pipeline {
         stage('Push image to GitHub') {
             steps {
                 sh """
-                    podman push ghcr.io/suppada/fedora:latest'
+                    podman push ghcr.io/suppada/fedora:latest
                 """
             }
         }
