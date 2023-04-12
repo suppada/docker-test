@@ -1,7 +1,3 @@
-# Use a minimal image as parent
-FROM openjdk:8-jdk-alpine
-
-# Environment variables
-ENV TOMCAT_MAJOR=8 \
-    TOMCAT_VERSION=8.5.37 \
-    CATALINA_HOME=/opt/tomcat
+FROM fedora:latest
+RUN dnf -y update && dnf -y install httpd
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
