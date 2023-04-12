@@ -13,7 +13,7 @@ pipeline {
         stage('Tag image') {
             steps {
                 sh """
-                    podman tag fedora ghcr.io/suppada/fedora:latest'
+                    podman tag fedora ghcr.io/suppada/fedora:latest
                 """
             }
         }
