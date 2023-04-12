@@ -20,7 +20,7 @@ pipeline {
         stage('Authenticate with GitHub') {
             steps {
                 sh """
-                    export TOKEN=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
+                    export TOKEN=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
                     echo $TOKEN | podman login ghcr.io -u suppada --password-stdin
                 """
             }
