@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Authenticate with GitHub') {
             steps {
-                sh 'echo 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 | podman login ghcr.io -u suppada --password-stdin'
+                sh 'echo mytoken.txt | podman login ghcr.io -u suppada --password-stdin'
             }
         }
         stage('Push image to GitHub') {
